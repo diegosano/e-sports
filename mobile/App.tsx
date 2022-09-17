@@ -8,8 +8,8 @@ import {
 } from '@expo-google-fonts/inter';
 
 import { Background } from './src/components/Background';
-import { Home } from './src/screens/Home';
 import { Loader } from './src/components/Loader';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [isFontLoaded] = useFonts({
@@ -27,7 +27,7 @@ export default function App() {
         translucent
       />
 
-      {isFontLoaded ? <Home /> : <Loader />}
+      {isFontLoaded ? <Routes /> : <Loader />}
     </Background>
   );
 }
